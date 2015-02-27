@@ -40,7 +40,8 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'assets/js/build/main.min.js': ['assets/js/src/main.js']
+          'assets/js/build/avatar.min.js': ['assets/js/src/avatar.js'],
+          'assets/js/build/getSpark.min.js': ['assets/js/src/getSpark.js']
         }
       }
     },
@@ -69,7 +70,8 @@ module.exports = function(grunt) {
             files: {
                 'jquery.min.js': 'jquery/dist/jquery.min.js',
                 'jquery.min.map': 'jquery/dist/jquery.min.map',
-                'spark.min.js': 'spark/dist/spark.min.js'
+                'spark.min.js': 'spark/dist/spark.min.js',
+                'paper-full.min.js': 'paper/dist/paper-full.min.js'
             }
         }
     },

@@ -1,3 +1,6 @@
+/*! Get spark data */
+
+
 $(function() {
   //YOUR DEVICE ID!!!
   var deviceID    = "53ff6e066667574825562467";
@@ -11,9 +14,8 @@ $(function() {
     console.log('request');
     $.get(getURL,{ access_token: accessToken }, function(data){
       var obj = JSON.parse(data);
-      var dtObj = JSON.parse(obj.result);
-      console.log(dtObj);
-      //$('#output').html(dtObj.name+':&nbsp;'+stObj.result);
+      var dataObj = JSON.parse(obj.result);
+      glob.dataObj = dataObj;
     });
   },5000);
 
