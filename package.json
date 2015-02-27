@@ -1,0 +1,26 @@
+{
+  "name": "spark",
+  "version": "0.0.1",
+  "description": "Spar tests for MDP project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "author": "unsalted",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-less": "^0.12.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-bowercopy": "^1.2.0",
+    "grunt-autoprefixer": "^2.0.0",
+    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-lesslint": "^1.1.13"
+  },
+  "dependencies": {
+    "grunt": "^0.4.5"
+  }
+}

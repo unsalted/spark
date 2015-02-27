@@ -1,0 +1,330 @@
+@dark: #1C1C1C;
+@white: #F8F8F8;
+@blue: rgba(0, 0, 255, 1);
+@red: rgba(255, 0, 0, 1);
+@yellow: #F9EC2A;
+@magenta: #DD007C;
+@green: #28A532;
+@teal: #2FA1DC;
+@lightGray: #ccc;
+@secondary: #52FFBD;
+@menuBackground: #eee;
+@menuColor: @dark;
+
+.wigrum{
+   
+   font-family:"Wigrum Regular", Arial, Helvetica, sans-serif; font-weight:500; font-style:normal;
+}
+
+.wigrum-bold {
+  font-family:"Wigrum Medium", Arial, Helvetica, sans-serif; font-weight:600; font-style:normal; 
+}
+
+b {
+  .wigrum-bold;
+}
+
+em {
+  font-family:"Wigrum Light Italic", Arial, Helvetica, sans-serif; font-weight:200; font-style:normal;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  //height: 100%;
+  color: @blue;
+  background-color: @white;
+
+  //font-family: "kepler-std"
+  .wigrum;
+}
+
+body{
+  max-width: 1400px;
+  min-width: 800px;
+  overflow-x: hidden;
+  margin: 0 auto;
+  //height: 100%;
+  color: @blue;
+  overflow: hidden;
+}
+
+main {
+  margin-top: 55px;
+  margin-bottom: 70px;
+  min-width: 800px;
+  overflow-x: hidden;
+}
+.main{
+  //overflow-y: scroll;
+  //overflow-x: hidden;
+}
+
+.salted{
+  color: red;
+}
+
+h1, h2, h3, h4, h5{
+  .wigrum-bold;
+}
+
+a,h1,h2,h3,h4,h5 {
+  color: @blue;
+}
+
+b{
+  weight: 700;
+}
+
+a {
+  color: @blue;
+  text-decoration: none;
+  &:hover {
+    color: @red;
+    p,a,h1,h2,h3,h4,h5 {
+      color: @red;
+    }
+  }
+}
+
+img{
+  background-color: #fff;
+}
+
+//MAIN HEADER
+.header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  height: 50px;
+  padding-top: 15px;
+  width: 100%;
+  max-width: 1400px;
+  background-color: @white;
+}
+
+//UNSALTED - Projects
+.projects {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    margin: 0 0 40px 0 !important;
+  }
+  .mediums{
+    text-transform: capitalize;
+  }
+  h4 {
+    margin: 0;
+  }
+}
+
+//UNSALTED - Project
+
+.project {
+  .meta{
+    list-style: none;
+    margin: 20px 0 30px 0;
+    .oi {
+      font-size: 12px;
+    }
+  }
+  li ul li{
+    padding-bottom: 0;
+  }
+  .content{
+    figure.img-max{
+      img{
+        margin: 0px;
+      }
+    }
+  }
+  .img-caption{
+    margin: 0px;
+    p{
+    font-size: 15px;
+    }
+  }
+}
+
+.scroll{
+  //overflow-y: scroll;
+  //overflow-x: hidden;
+}
+
+#meta-grid{
+    figure{
+      img{
+        margin:0 0 10px; width:100%; height:auto;
+      }
+    }
+}
+
+//Project Feeds
+
+.project-feed{
+  ul{
+    margin: 0;
+  }
+}
+
+.date-title{
+  border-bottom: 2px solid @blue;
+}
+
+.nextprev{
+  .wigrum-bold;
+  .next{
+    margin: 30px 0;
+    float: right;
+    text-align: right;
+  }
+  .prev{
+    margin: 30px 0;
+    float: left;
+    text-align: left;
+  }
+}
+
+.project-feeds-menu{
+  .wigrum-bold;
+  display: block;
+  height:23px;
+  padding: 0 0 10px 0;
+  margin: 0;
+  list-style: none;
+  background-color: @white;
+  li{
+    a{
+    display: block;
+    height: 0;
+    opacity: 0.0;
+    }
+  }
+  li:first-child{
+    a{
+    height: 20px;
+    opacity: 1;
+    }
+  }
+  &:hover{
+    height: auto;
+    li{
+      a{
+        display: block;
+        height: 20px;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.index{
+  h4.col-title{
+    border-bottom: 2px solid @blue;
+  }
+}
+
+.filter{
+  a{
+    display: block;
+  }
+  &.medium{
+    h4{
+    color: @magenta;
+    }
+  }
+  &.tags{
+    h4{
+      color: @green;
+    }
+  }
+  &.school{
+    h4{
+      color: @teal;
+    }
+  }
+}
+
+.filter-project{
+  a{
+    display: block;
+    &.active{
+      h4{
+        color: @red;
+      }
+    }
+    &.medium{
+      h4{
+        color: @magenta;
+      }
+    }
+    &.tag{
+      h4{
+        color: @green;
+      }
+    }
+    &.school{
+      color: @teal;
+      h4{
+        color: @teal;
+      }
+    }
+  }
+}
+.index{
+  ul{
+    margin: 0 0 20px 15px;
+    &.schools{
+      li:hover{
+        a{
+          h4{
+            color: @teal;
+          }
+        }
+      }
+    }
+    &.mediums{
+      li:hover{
+        a{
+          h4{
+            color: @magenta;
+          }
+        }
+      }
+    }
+    &.tags{
+      li:hover{
+        a{
+          h4{
+            color: @green;
+          }
+        }
+      }
+    }
+  }
+}
+//Grid
+#param-title{
+  margin-bottom: 20px;
+}
+
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  padding: 19px 0 10px 0;
+  overflow: hidden;
+  max-height: 55px;
+  max-width: 1400px;
+  background-color: @white;
+  .transition(max-height 400ms);
+  &:hover{
+    height: auto;
+    max-height: 400px;
+  }
+}
