@@ -13,8 +13,7 @@ $(function() {
   setInterval(function(){
     console.log('request');
     $.get(getURL,{ access_token: accessToken }, function(data){
-      var obj = JSON.parse(data);
-      var dataObj = JSON.parse(obj.result);
+      var dataObj = JSON.parse(data.result);
       glob.dataObj = dataObj;
     });
   },5000);

@@ -1,6 +1,6 @@
 var dataObj;
 var oldObj;
-var tempBool = false;
+var objBool = false;
 
   
 
@@ -10,12 +10,15 @@ setInterval(function(){
     dataObj = glob.dataObj;
   }
 
-  if(dataObj.temperature !== oldObj){
-    tempBool = true;
-    console.log(dataObj.temperature);
-    oldObj = dataObj.temperature;
+  if(dataObj !== oldObj){
+    objBool = true;
+    console.log(dataObj);
+    oldObj = dataObj;
   } else {
-    tempBool = false;
+    objBool = false;
   }
 
 }, 100);
+
+var myCircle = new Path.Circle(new Point(100, 70), 50);
+myCircle.fillColor = 'black';

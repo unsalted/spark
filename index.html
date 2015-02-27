@@ -5,12 +5,12 @@
   <script type="text/javascript">
   var glob = {};
   </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script type="text/javascript" src="./assets/js/vendor/paper-full.min.js"></script>
-  <script type="text/javascript" src="./assets/js/vendor/jquery.min.js"></script>
   <script type="text/javascript" src="./assets/js/src/getSpark.js"></script>
-  <script type="text/javascript" src="./assets/js/src/avatar.js"></script>
 </head>
 <body>
-<h1 id="output"></h1>
+<canvas id="canvas" resize></canvas>
+<script type="text/paperscript" src="./assets/js/src/avatar.js" canvas="canvas"></script>
 </body>
 </html>
